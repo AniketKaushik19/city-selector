@@ -3,7 +3,7 @@ from tkinter import ttk
 from tkinter import *
 
 def on_select(event):
-    selected_item = monthchoosen.get()
+    selected_item = citychoosen.get()
     label.config(text="Selected State: " + selected_item)
     label1.config(text="Country: " + c[selected_item])
     
@@ -52,14 +52,14 @@ window.configure(bg="#71d6e3")
 # Create a label and combobox
 ttk.Label(window, text="Select the State :", font=("Times New Roman", 12)).place(relx=0.2, rely=0.3,anchor=CENTER)
 n = tk.StringVar()
-monthchoosen = ttk.Combobox(window, width=27, textvariable=n)
-monthchoosen['values'] = list(c.keys())
-#s=monthchoosen.get()
+citychoosen = ttk.Combobox(window, width=27, textvariable=n)
+citychoosen['values'] = list(c.keys())
+#s=citychoosen.get()
 #print(s)
 label = tk.Label(window, text="Selected Item: ",fg="green")
 label.place(relx=0.5, rely=0.5,anchor=CENTER)
 label1 = tk.Label(window, text="Country: ",fg="green")
 label1.place(relx=0.5, rely=0.6,anchor=CENTER)
-monthchoosen.bind("<<ComboboxSelected>>", on_select)
+citychoosen.bind("<<ComboboxSelected>>", on_select)
 #ttk.Label(window, text="India", font=("Times New Roman", 10)).grid(column=0, row=6, padx=10, pady=25)
-monthchoosen.place(relx=0.5, rely=0.3,anchor=CENTER)
+citychoosen.place(relx=0.5, rely=0.3,anchor=CENTER)
