@@ -48,6 +48,7 @@ c={
 window = tk.Tk()
 window.title('Aniket project')
 window.geometry('500x250')
+window.maxsize(width=500, height=250)
 window.configure(bg="#71d6e3")
 # Create a label and combobox
 ttk.Label(window, text="Select the State :", font=("Times New Roman", 12)).place(relx=0.2, rely=0.3,anchor=CENTER)
